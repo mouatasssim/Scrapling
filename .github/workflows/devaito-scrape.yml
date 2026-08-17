@@ -2,6 +2,12 @@ name: Scrape Devaito
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "custom/devaito_spider.py"
+      - ".github/workflows/devaito-scrape.yml"
 
 jobs:
   scrape:
